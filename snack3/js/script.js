@@ -13,7 +13,7 @@ for (let i = 0; i < 6; i++) {
         console.log(number);
     
         /* VERIFICA SE IL NUMERO E' DISPARI E AGGIUNGILO NELL'ARRAY */
-        if (number % 2 === 1) {
+        if (number % 2 !== 0) {
             dispari.push(number);
         }
 
