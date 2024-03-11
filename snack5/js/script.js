@@ -4,8 +4,10 @@
 const numbers = [];
 let max = 0;
 
+let min = 0;
+
 /* CICLO */
-for (let i = 0; i < 10; i++ ) {
+for (let i = 0; i < 3; i++ ) {
 
     /* INSERISCI I NUMERI */
     let number = parseInt(prompt('Inserisci un numero'));
@@ -15,8 +17,16 @@ for (let i = 0; i < 10; i++ ) {
     numbers.push(number);
     console.log(numbers);
     
+    /* METODO ALTERNATIVO PER TROVARE IL MAX */
+    if (min < numbers[i]) {
+        min = numbers[i];
+    }
+
 }
 
-    /* IL NUMERO PIù GRANDE */ 
-    max = Math.max(...numbers);
-    console.log('il numero inserito più grande è' + '  ' + max);
+/* IL NUMERO PIù GRANDE */ 
+max = Math.max(...numbers);
+console.log('il numero inserito più grande è' + '  ' + max);
+
+/* METODO ALTERNATIVO PER TROVARE IL MAX */
+console.log('il numero MAX (secondo metodo) è ' + min);
